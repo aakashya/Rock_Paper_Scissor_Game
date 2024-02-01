@@ -1,0 +1,416 @@
+/* font family */
+@import url("https://fonts.googleapis.com/css2?family=Dangrek&family=Roboto:wght@400;500;700&display=swap");
+
+/* remove default styling */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #8cc461;
+  height: 100vh;
+  width: 100vh;
+  color: #ffffff;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+/* SCORE BOARD SECTION */
+.scoreBoard {
+  width: 800px;
+  height: 140px;
+  position: absolute;
+  border: 2px solid #ffffff;
+  border-radius: 13px;
+  padding: 4px 10px;
+  display: flex;
+  margin-top: 40px;
+}
+
+.title {
+  line-height: 1.2em;
+  letter-spacing: 0.1em; 
+  font-size: 35px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-left: 5px;
+}
+
+.score {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.computerScore,.playerScore {
+  width: 140px;
+  height: 118px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 9px;
+  color: #656565;
+  text-transform: uppercase;
+  margin-right: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  letter-spacing: 0.1em;
+  padding-top: 7px;
+}
+
+.number {
+  position: relative;
+  color: #252525;
+  font-size: 60px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  bottom: 5px;
+  padding-top: 5px;
+}
+
+/* PLAYER HAND SECTION SECTION */
+.handSelection {
+  height: 60%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  position: relative;
+  margin-top: 14%;
+}
+
+.handSelectionRow1 {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  height: 40%;
+  z-index: 2;
+}
+
+.line1,.line2,.line3 {
+  position: absolute;
+  z-index: 1;
+}
+
+.line1 {
+  left: 35%;
+  top: 25%;
+  width: 30%;
+  height: 5%;
+}
+
+.line3 {
+  left: 34%;
+  top: 35%;
+  width: 13%;
+}
+
+.line2 {
+  left: 53%;
+  top: 35%;
+  width: 13%;
+}
+
+.handSelectionRow2 {
+  position: relative;
+  height: 40%;
+}
+
+.hand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 150px;
+  height: 150px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 2;
+  transition: all 0.25s;
+}
+
+.pick > img:hover {
+  scale: 1.1;
+}
+
+.bg-rock {
+  background-image: url("./assets/rock_bg.png");
+}
+.bg-scissor {
+  background-image: url("./assets/scissor_bg.png");
+}
+.bg-paper {
+  background-image: url("./assets/paper_bg.png");
+}
+
+/* RULES POPUP SECTION */
+.rulesPopup {
+  box-sizing: border-box;
+  width: 280px;
+  height: 330px;
+  position: fixed;
+  bottom: 75px;
+  right: 45px;
+  background-color: #004429;
+  border: 7px solid #ffffff;
+  border-radius: 13px;
+  z-index: 1;
+  display: none;
+}
+
+.rulesHeading {
+  position: absolute;
+  width: 260px;
+  height: 27px;
+  margin: 20px auto;
+  text-align: center;
+  font-weight: 500;
+  font-size: 29px;
+  line-height: 34px;
+}
+
+.rulesContainer {
+  width: 245px;
+  height: 30px;
+  position: absolute;
+  top: 50px;
+}
+
+ul {
+  padding-left: 15px;
+  width: 100%;
+  margin: 15px 0;
+}
+
+li {
+  display: table;
+}
+
+li span {
+  width: 8px;
+  height: 8px;
+  background-color: #ffd600;
+  display: inline-table;
+  text-align: center;
+  vertical-align: middle;
+}
+
+li p {
+  display: table-cell;
+  margin: 0;
+  padding-left: 13px;
+  padding-bottom: 10px;
+  font-size: 13.5px;
+}
+
+.crossSymbol {
+  position: absolute;
+  top: -30px;
+  left: 235px;
+  width: 40px;
+  height: 40px;
+  background-image: url("./assets/close_bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 30px;
+  border: none;
+  font-size: 28px;
+  font-family: "Dangrek", sans-serif;
+  font-weight: 500;
+  color: white;
+  transform: scale(1.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* BUTTON SECTION */
+.rulesBtn,.nextBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 40px;
+  box-sizing: border-box;
+  padding: 5px 22px;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  background: none;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.nextBtn {
+  visibility: hidden;
+}
+
+#rulesWinBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 180px;
+  visibility: hidden;
+}
+
+/* GAME OUTCOME SECTION */
+.gameOutcome {
+  position: relative;
+  top: 320px; 
+  display: flex;
+  justify-content: space-around;
+  width: 680px; 
+  height: 260px; 
+  transform: scale(1.2);
+  display: none;
+}
+
+.playerHand,.pcHand {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  line-height: 40px; 
+}
+
+.youPicked,.pcPicked {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 17px;
+  font-weight: 600px; 
+  display: flex;
+  justify-content: center;
+  z-index: 3;
+}
+
+.decision {
+  position: relative;
+  top: 80px; 
+}
+
+.winOrLost {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 40px; 
+  font-weight: 800;
+  line-height: 46px;
+  text-align: center;
+}
+
+.against {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 23px;
+  font-weight: 800;
+  line-height: 35px; 
+  text-align: center;
+}
+
+.playAgainBtn {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #6b6b6b;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px; 
+  padding: 10px 28px; 
+  border: none;
+  border-radius: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+/* VICTORY PAGE SECTION */
+.vistoryPage {
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+
+.poster {
+  position: fixed;
+  top: 70px;
+}
+
+.trophy {
+  position: absolute;
+  top: 115px;
+  right: 140px;
+}
+
+.hurray {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  position: relative;
+  top: 400px;
+  left: 30px;
+  font-weight: 600;
+  font-size: 95px;
+  line-height: 107px;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.message {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  position: relative;
+  top: 375px;
+  left: 30px;
+  font-weight: 600;
+  font-size: 41px;
+  line-height: 85px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.vistoryPage .playAgainBtn {
+  top: 375px;
+  left: 30px;
+  margin: 30px auto;
+}
+
+/* WINNER BACKGROUND JS PART */
+.winBg::after {
+  content: " ";
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 0 0 20px #3b6720, 0 0 0 40px rgba(29, 168, 43, 0.79),
+    0 0 0 65px rgba(46, 154, 37, 0.39);
+  animation: winBg 1s ease forwards;
+  position: absolute;
+  z-index: -2;
+}
+
+@keyframes winBg {
+  from {
+    opacity: 0;
+    width: 10%;
+    height: 25%;
+  }
+  to {
+    opacity: 1;
+    width: 19%;
+    height: 50%;
+  }
+}

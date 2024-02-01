@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favion -->
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.png" />
+    <!-- css file -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Rock Paper Scissor Game</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- score board section -->
+      <div class="scoreBoard" id="scoreBoard">
+        <div class="title">
+          Rock <br />
+          Paper <br />
+          Scissors <br />
+        </div>
+        <div class="score">
+          <div class="computerScore">
+            Computer <br />
+            Score <span class="number" id="computerScore">0</span>
+          </div>
+          <div class="playerScore">
+            Your <br />
+            Score <span class="number" id="playerScore">0</span>
+          </div>
+        </div>
+      </div>
+      <!-- hand slection section -->
+      <div class="handSelection" id="handSelection">
+        <div class="lines">
+          <img src="./assets/Line 1.png" class="line1" />
+          <img src="./assets/Line 2.png" class="line2" />
+          <img src="./assets/Line 3.png" class="line3" />
+        </div>
+        <div class="handSelectionRow1">
+          <div class="hand bg-rock pick" selection="rock">
+            <img src="./assets/rock.png" />
+          </div>
+          <div class="hand bg-scissor pick" selection="scissor">
+            <img src="./assets/scissor.png" />
+          </div>
+        </div>
+        <div class="handSelectionRow2 hand bg-paper pick" selection="paper">
+          <img src="./assets/paper.png" />
+        </div>
+      </div>
+      <!--game outcome section  -->
+      <div class="gameOutcome" id="gameOutcome">
+        <!-- playerhand selected section  -->
+        <div class="playerHand">
+          <div class="youPicked">you picked</div>
+          <div class="hand bg-rock" id="playerHand">
+            <img src="./assets/rock.png" alt="" />
+          </div>
+        </div>
+        <!-- game decision section -->
+        <div class="decision">
+          <div class="winOrLost" id="result">you win</div>
+          <div class="against" id="against">Against pc</div>
+          <button class="playAgainBtn" id="playAgainBtn">Play Again</button>
+        </div>
+        <!-- computerhand selected section -->
+        <div class="pcHand">
+          <div class="pcPicked">Pc picked</div>
+          <div class="hand bg-scissor" id="pcHand">
+            <img src="./assets/scissor.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <!-- rules popup section -->
+      <div class="rulesPopup" id="rulesPopup">
+        <button class="crossSymbol" id="closeBtn">X</button>
+        <div class="rulesHeading">Game Rules</div>
+        <div class="rulesContainer">
+          <ul class="rule">
+            <li>
+              <span></span>
+              <p>
+                Rock beats scissors, scissors beat paper, and paper beats rock.
+              </p>
+            </li>
+            <li>
+              <span></span>
+              <p>
+                Agree ahead of time whether you’ll count off “rock, paper,
+                scissors, shoot” or just “rock, paper, scissors.”
+              </p>
+            </li>
+            <li>
+              <span></span>
+              <p>
+                Use rock, paper, scissors to settle minor decisions or simply
+                play to pass the time
+              </p>
+            </li>
+            <li>
+              <span></span>
+              <p>
+                If both players lay down the same hand, each player lays down
+                another hand
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <button class="rulesBtn" id="rulesWinBtn">Rules</button>
+      <!-- vistory page section -->
+      <div class="vistoryPage" id="vistoryPage">
+        <div class="poster">
+          <img src="./assets/stars_bg.png" alt="" />
+          <div class="trophy"><img src="./assets/trophy.png" alt="" /></div>
+        </div>
+        <div class="hurray">hurry!!</div>
+        <div class="message">you won the game</div>
+        <button class="playAgainBtn" id="playAgainWinBtn">Play Again</button>
+      </div>
+    </div>
+    <button class="nextBtn" id="next">next</button>
+    <button class="rulesBtn" id="rules">Rules</button>
+    <!-- JS file -->
+    <script src="index.js"></script>
+  </body>
+</html>
