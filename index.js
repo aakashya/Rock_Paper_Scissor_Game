@@ -3,7 +3,7 @@
 //  Player Hand Selection Element
 const buttons = document.querySelectorAll(".pick");
 
-// Scoreboard Section Element (Player & Computer Score) 
+// Scoreboard Section Element (Player & Computer Score)
 const scoreBoard = document.getElementById("scoreBoard");
 const playerScoreElement = document.getElementById("playerScore");
 const pcScoreElement = document.getElementById("computerScore");
